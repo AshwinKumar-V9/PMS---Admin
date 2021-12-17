@@ -1,0 +1,33 @@
+
+.login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+    .login_left, .login_right{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .login_left img{
+        width: 80%;
+    }
+    .login_right h1{
+        font-size: 3rem;
+    }
+    .login_right button{
+        padding: 1.5% 2.5%;
+        border-style: none;
+        background-color: crimson;
+        color: white;
+        font-size: 1.3rem;
+        border-radius: .7rem;
+        margin: 3%;
+    }
