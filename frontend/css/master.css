@@ -32,6 +32,7 @@ li:hover, .meeting_card_wrapper p:hover{
     align-items: center;
     background-color: #0E0661 ;
     color: #ffffff;
+    animation: slide-down 700ms ease-in-out;
 }
     .top_nav ul{
         display: flex;
@@ -51,6 +52,7 @@ li:hover, .meeting_card_wrapper p:hover{
     width: 18%;
     background-color: #93A1EC;
     font-size: 1.2rem;
+    animation: slide-right 700ms ease-in-out;
 }
     .left_nav ul{
         list-style: none;
@@ -69,6 +71,7 @@ li:hover, .meeting_card_wrapper p:hover{
 .content_wrapper{
     width: 72%;
     padding:3% 5%;
+    animation: slide-up 2s ease-in-out;
 }
 .card_wrapper{
     display: flex;
@@ -117,6 +120,31 @@ li:hover, .meeting_card_wrapper p:hover{
         align-items: center;
         width: 25%;
     }
+
+@keyframes slide-down {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes slide-right {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slide-up {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
 
 /*------------------Media Queries for Responsive Design----------------------------*/
 @media screen and (max-width: 2560px) {
