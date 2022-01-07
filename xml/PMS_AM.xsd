@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pms:schema xmlns:pms="http://www.w3.org/2001/XMLSchema">
+    <pms:element name="user" type="user"></pms:element>
+    <pms:complexType name="user">
+        <pms:sequence>
+            <pms:element name="employee" type="employee" maxOccurs="unbounded"></pms:element>
+            <pms:element name="client" type="client" maxOccurs="unbounded"></pms:element>
+        </pms:sequence>
+    </pms:complexType>
+    <pms:complexType name="employee">
+        <pms:sequence>
+            <pms:element name="id" type="emp_id"></pms:element>
+            <pms:element name="name" type="pms:string"></pms:element>
+            <pms:element name="email" type="email"></pms:element>
+            <pms:element name="phone" type="phone"></pms:element>
+            <pms:element name="role" type="pms:string"></pms:element>
+            <pms:element name="experience" type="pms:integer"></pms:element>
+        </pms:sequence>
+    </pms:complexType>
+    <pms:complexType name="client">
+        <pms:sequence>
+            <pms:element name="id" type="emp_id"></pms:element>
+            <pms:element name="name" type="pms:string"></pms:element>
+            <pms:element name="email" type="email"></pms:element>
+            <pms:element name="phone" type="phone"></pms:element>
+            <pms:element name="age" type="pms:integer"></pms:element>
+        </pms:sequence>
+    </pms:complexType>
+    <pms:simpleType name="emp_id">
+        <pms:restriction base="pms:string">
+            <pms:maxLength value="5"></pms:maxLength>
+            <pms:pattern value="A([0-9])+"></pms:pattern>
+        </pms:restriction>
+    </pms:simpleType>
+    <pms:simpleType name="email">
+        <pms:restriction base="pms:string">
+            <pms:maxLength value="50"></pms:maxLength>
+            <pms:pattern value="[^@]+@[^\.]+\..+"></pms:pattern>
+        </pms:restriction>
+    </pms:simpleType>
+    <pms:simpleType name="phone">
+        <pms:restriction base="pms:string">
+            <pms:length value="10"></pms:length>
+            <pms:pattern value="[0-9]+"></pms:pattern>
+        </pms:restriction>
+    </pms:simpleType>
+</pms:schema>
