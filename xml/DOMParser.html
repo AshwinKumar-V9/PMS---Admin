@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Management</title>
+</head>
+<body>
+                <h1>Admin Management</h1>
+                <h2>Employee</h2>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Role</th>
+                        <th>Experience</th>
+                    </tr>
+                    <div id="employee_data"></div>
+                </table>
+                <h2>Client</h2>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Age</th>
+                    </tr>
+                    <xsl:for-each select="user/client">
+                    <xsl:sort select="name"/>
+                    <xsl:choose>
+                        <xsl:when test="age &gt; 20">
+                            <tr style="background-color:blueviolet;">
+                                <td><xsl:value-of select="id"/></td>
+                                <td><xsl:value-of select="name"/></td>
+                                <td><xsl:value-of select="email"/></td>
+                                <td><xsl:value-of select="phone"/></td>
+                                <td><xsl:value-of select="age"/> years</td>
+                            </tr>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <tr>
+                                <td><xsl:value-of select="id"/></td>
+                                <td><xsl:value-of select="name"/></td>
+                                <td><xsl:value-of select="email"/></td>
+                                <td><xsl:value-of select="phone"/></td>
+                                <td><xsl:value-of select="role"/></td>
+                                <td><xsl:value-of select="age"/> years</td>
+                            </tr>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    </xsl:for-each>
+                </table>
+
+    <script>
+
+    </script>
+</body>
+</html>
