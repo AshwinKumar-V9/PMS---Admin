@@ -13,6 +13,7 @@ h1{
     color: white;
     background-color: #333333;
     padding:1%;
+    margin: 0;
 }
 table{
     background-color: #e3e3e3;
@@ -51,4 +52,14 @@ button:hover{
 .material-icons:hover{
     cursor: pointer;
     color:#e05e5e;
+}
+
+#addRecordForm{
+    padding: 2% 5%;
+    border: 1px solid #000000;
+    background-color: #e3e3e3;
+    position: absolute;
+    top:2%;
+    left:28%;
+    display: none;
 }

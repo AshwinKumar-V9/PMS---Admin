@@ -43,7 +43,7 @@ function displayTable()
     document.getElementById("table").innerHTML = table
 }
 
-//function to delete record
+//function to delete record from XML
 function deleteRecord(i)
 {
     y = xmlDoc.getElementsByTagName("Employee")[i]
@@ -57,8 +57,37 @@ function deleteRecord(i)
     }
 }
 
-function editRecord(i)
+//function to open form to add new record to xml
+function openForm()
 {
-    console.log("edit " +(i + 1)+ " record")
+    document.getElementById("addRecordForm").style.display = "block"
+}
 
+//function to close form to add new record to xml
+function closeForm()
+{
+    document.getElementById("addRecordForm").style.display = "none"
+}
+
+//function to add new record to xml
+function addNewRecord()
+{
+    var i
+    var emp = []
+    var x = document.getElementById("addRecordForm")
+    employee = xmlDoc.createElement("Employee")
+    emp[0] = xmlDoc.createElement("Emp-name")
+    emp[1] = xmlDoc.createElement("Emp-age")
+    emp[2] = xmlDoc.createElement("Emp-salary")
+    emp[3] = xmlDoc.createElement("Emp-emailid")
+    emp[4] = xmlDoc.createElement("Emp-phonenum")
+    emp[5] = xmlDoc.createElement("Emp-designation")
+    for(i = 0; i < 6; i++)
+    {
+        emp[i].appendChild(xmlDoc.createTextNode(x.elements[i].value))
+        employee.appendChild(emp[i])
+    }
+    xmlDoc.documentElement.appendChild(employee);
+    console.log("Record added: " + x.elements[0].value)
+    displayTable()
 }
