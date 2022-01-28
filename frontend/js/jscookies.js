@@ -53,9 +53,9 @@ function removeCookie()
     sessionStorage.removeItem('name')
     sessionStorage.removeItem('location')
     sessionStorage.removeItem('color')
-    document.cookie = "name="
-    document.cookie = "location="
-    document.cookie = "color="
+    document.cookie = "name=;expires=Sun, 30 Jan 2021 00:00:00 UTC;"
+    document.cookie = "location=;expires=Sun, 30 Jan 2021 00:00:00 UTC;"
+    document.cookie = "color=;expires=Sun, 30 Jan 2021 00:00:00 UTC;"
     alert("cookies cleared")
     window.location.reload()
 }
