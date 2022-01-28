@@ -117,3 +117,24 @@ user_pswd.addEventListener('keyup', ()=>{
         }
     }
 })
+
+//event listener to validate entire form
+document.getElementById("content_wrapper").addEventListener('keyup', ()=>{
+    email = document.getElementById("user_email_validate").style.color
+    phone = document.getElementById("user_phone_validate").style.color
+    pswd = document.getElementById("user_pswd_validate").style.color
+    if((email == 'green') && (phone == 'green') && (pswd == 'green') && (user_name.value.trim() != "") && (user_dept.value.trim() != "") && (user_loc.value.trim() != ""))
+    {
+        document.getElementById("submit").classList.remove("disabled")
+    }
+    else
+    {
+        document.getElementById("submit").classList.add("disabled")
+    }
+})
+
+//confirm submission
+function submitForm()
+{
+    alert("Submitted Successfully")
+}

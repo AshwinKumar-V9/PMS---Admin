@@ -51,7 +51,7 @@
         </div>
 
         <!--Content section-->
-        <div class="content_wrapper">
+        <div class="content_wrapper" id="content_wrapper">
             <h1 class="container mb-lg-5 mb-3">Add Employee</h1>
             <form class="container">
                 <div class="mb-3">
@@ -81,7 +81,7 @@
                     <label for="user_loc" class="form-label">Location</label>
                     <input type="text" class="form-control" id="user_loc" placeholder="Enter your location...">
                 </div>
-                <input type="submit" id="submit" value="Submit" class="btn btn-primary">
+                <input type="submit" id="submit" value="Submit" onclick="submitForm()" class="btn btn-primary disabled">
             </form>
         </div>
 
