@@ -3,7 +3,7 @@ var empMS = angular.module("empMS", [])
 empMS.controller("empMSCtrl", ($scope, $http)=>{
 
     //retrieve JSON file
-    $http.get("./employee.json")
+    $http.get("https://github.com/AshwinKumar-V9/PMS-Admin/blob/main/Angular_JSON/employee.json")
     .success((response)=>{
         $scope.employees = response
     })
