@@ -71,7 +71,7 @@ li:hover, .meeting_card_wrapper p:hover{
 .content_wrapper{
     width: 72%;
     padding:3% 5%;
-    animation: slide-up 2s ease-in-out;
+    animation: slide-up 1s ease-in-out;
 }
 .card_wrapper{
     display: flex;
@@ -139,10 +139,12 @@ li:hover, .meeting_card_wrapper p:hover{
 }
 @keyframes slide-up {
     0%{
-        transform: translateY(100%);
+        transform: translateY(10%);
+        opacity: 0;
     }
     100%{
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
