@@ -1,0 +1,114 @@
+[
+    {
+        "emp_id": "E01",
+        "emp_name": {
+            "emp_firstname": "Ashwin",
+            "emp_lastname": "Kumar V"
+        },
+        "emp_phone": "9900160224",
+        "emp_email": "ashwin@gmail.com",
+        "emp_address": "Muthyalanagar, Bangalore-54, Karnataka, India",
+        "emp_joiningdate": "12-03-2016",
+        "emp_password": "employee01",
+        "team_roles": [
+            {"Team1": "Project Manager"},
+            {"Team2": "Technical Head"}
+        ]
+    },
+    {
+        "emp_id": "E02",
+        "emp_name": {
+            "emp_firstname": "Anisha",
+            "emp_lastname": "Beck"
+        },
+        "emp_phone": "9900160114",
+        "emp_email": "anisha@gmail.com",
+        "emp_address": "S G Palya, Bangalore-51, Karnataka, India",
+        "emp_joiningdate": "12-04-2016",
+        "emp_password": "employee02",
+        "team_roles": [
+            {"Team1": "Technical Lead"},
+            {"Team3": "Technical Writer"}
+        ]
+    },
+    {
+        "emp_id": "E03",
+        "emp_name": {
+            "emp_firstname": "Akash",
+            "emp_lastname": "Steve"
+        },
+        "emp_phone": "9923160224",
+        "emp_email": "akash@gmail.com",
+        "emp_address": "S G Palya, Bangalore-51, Karnataka, India",
+        "emp_joiningdate": "22-03-2011",
+        "emp_password": "employee03",
+        "team_roles": [
+            {"Team1": "Database Engineer"},
+            {"Team2": "DBA"}
+        ]
+    },
+    {
+        "emp_id": "E04",
+        "emp_name": {
+            "emp_firstname": "Akshaya",
+            "emp_lastname": "S"
+        },
+        "emp_phone": "9900123424",
+        "emp_email": "akshaya@gmail.com",
+        "emp_address": "Jayanagar, Bangalore-55, Karnataka, India",
+        "emp_joiningdate": "11-01-2013",
+        "emp_password": "employee04",
+        "team_roles": [
+            {"Team2": "Project Manager"},
+            {"Team3": "UI/ UX Designer"}
+        ]
+    },
+    {
+        "emp_id": "E05",
+        "emp_name": {
+            "emp_firstname": "Pooja",
+            "emp_lastname": "V"
+        },
+        "emp_phone": "990225224",
+        "emp_email": "pooja]@gmail.com",
+        "emp_address": "Yelahanka, Bangalore-50, Karnataka, India",
+        "emp_joiningdate": "07-05-2013",
+        "emp_password": "employee04",
+        "team_roles": [
+            {"Team1": "UI/ UX Designer"},
+            {"Team3": "Technical Head"}
+        ]
+    },
+    {
+        "emp_id": "E06",
+        "emp_name": {
+            "emp_firstname": "Vaishnavi",
+            "emp_lastname": "K V"
+        },
+        "emp_phone": "9111160224",
+        "emp_email": "vaishnavi@gmail.com",
+        "emp_address": "S G Palya, Bangalore-51, Karnataka, India",
+        "emp_joiningdate": "16-08-2015",
+        "emp_password": "employee06",
+        "team_roles": [
+            {"Team4": "Project Manager"},
+            {"Team2": "UI/UX Designer"}
+        ]
+    },
+    {
+        "emp_id": "E07",
+        "emp_name": {
+            "emp_firstname": "Bhavana",
+            "emp_lastname": "Choudhary"
+        },
+        "emp_phone": "9900160769",
+        "emp_email": "bhavana@gmail.com",
+        "emp_address": "Electronic City, Bangalore-53, Karnataka, India",
+        "emp_joiningdate": "15-04-2018",
+        "emp_password": "employee07",
+        "team_roles": [
+            {"Team4": "Technical Head"},
+            {"Team5": "DBA"}
+        ]
+    }
+]

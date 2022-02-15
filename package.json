@@ -1,0 +1,24 @@
+{
+  "name": "pms-admin",
+  "version": "1.0.0",
+  "description": "<p>Team 1 - Project Management System - Admin Management Module</p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshwinKumar-V9/PMS-Admin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshwinKumar-V9/PMS-Admin/issues"
+  },
+  "homepage": "https://github.com/AshwinKumar-V9/PMS-Admin#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mysql": "^2.18.1"
+  }
+}
