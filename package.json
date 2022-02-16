@@ -19,6 +19,7 @@
   "homepage": "https://github.com/AshwinKumar-V9/PMS-Admin#readme",
   "dependencies": {
     "express": "^4.17.2",
+    "express-formidable": "^1.2.0",
     "mysql": "^2.18.1"
   }
 }

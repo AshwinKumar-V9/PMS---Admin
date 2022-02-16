@@ -17,6 +17,10 @@ abc.config(($routeProvider)=>{
         templateUrl: './taskPages/search.html',
         controller: "searchCtrl"
     })
+    .when("/addEmp", {
+        templateUrl: './taskPages/addEmployeeForm.html',
+        controller: 'addCtrl'
+    })
 })
 
 //controllers
@@ -27,22 +31,29 @@ abc.controller("todayCtrl", function($scope, $rootScope){
     $rootScope.var = "Todays tasks"
     $scope.message = "There are no tasks for today!"
 })
-abc.controller("empCtrl",function($rootScope, $http)
+abc.controller("empCtrl",function($rootScope, $scope, $http, $location)
 {
     $rootScope.var = "Employee Details"
     //retrieve JSON file
-    $http.get("https://ashwinkumar-v9.github.io/PMS-Admin/frontend/employee.json")
+    $http.get("http://127.0.0.1:9000/Employee")
     .success(function(response){
         $rootScope.employees = response
         console.log("empJSON retrieved.")
     })
+    //POST request to remove employee
+    $scope.removeEmp = function(id, name) {
+        $http.post('/RemoveEmployee', {"id": id, "name": name})
+        .success(() => {
+            $location.path('/')
+        })
+    }
 })
 abc.controller("searchCtrl", function($scope,$rootScope, $http){
     $rootScope.var = "Search Employees"
     $scope.message = "Search employees in tasks by name:"
 
     //retrieve JSON file
-    $http.get("https://ashwinkumar-v9.github.io/PMS-Admin/frontend/employee.json")
+    $http.get("http://127.0.0.1:9000/Employee")
     .success(function(response){
         $rootScope.employees = response
         console.log("empJSON retrieved.")
@@ -59,4 +70,7 @@ abc.controller("searchCtrl", function($scope,$rootScope, $http){
             document.getElementById("search_table").style.display = "table"
         }
     })
+})
+abc.controller("addCtrl", function($rootScope){
+    $rootScope.var = "Add Employee"
 })

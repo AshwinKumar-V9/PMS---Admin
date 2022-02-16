@@ -20,8 +20,9 @@
                     <td>{{emp.email}}</td>
                     <td>{{emp.phone}}</td>
                     <td>{{emp.role | lowercase}}</td>
-                    <td>{{emp.performance * 100 | number:2}}%</td>
+                    <td>{{emp.performance}}%</td>
                     <td>{{emp.salary | currency}}</td>
+                    <td><span class='material-icons' ng-click="removeEmp($index, emp.name)">delete</span></td>
                 </tr>
             </tbody>
         </table>

@@ -46,13 +46,5 @@
     "role": "Intern",
     "performance": 0.78,
     "salary": 10000
-  },
-  {
-    "name": "Eren Jaeger",
-    "email": "tatakae@gmail.com",
-    "phone": "9146757639",
-    "role": "Intern",
-    "performance": 0.92,
-    "salary": 10000
   }
 ]
