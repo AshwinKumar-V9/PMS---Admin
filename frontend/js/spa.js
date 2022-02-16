@@ -1,9 +1,8 @@
 
 
-var abc = angular.module("tasks", ['ngRoute'])
-
+var tasks = angular.module("tasks", ['ngRoute'])
 //router config
-abc.config(($routeProvider)=>{
+tasks.config(($routeProvider)=>{
     $routeProvider
     .when("/", {
         templateUrl: './taskPages/today.html',
@@ -24,14 +23,14 @@ abc.config(($routeProvider)=>{
 })
 
 //controllers
-abc.controller("tasksCtrl", ()=>{
+tasks.controller("tasksCtrl", ()=>{
 })
 
-abc.controller("todayCtrl", function($scope, $rootScope){
+tasks.controller("todayCtrl", function($scope, $rootScope){
     $rootScope.var = "Todays tasks"
     $scope.message = "There are no tasks for today!"
 })
-abc.controller("empCtrl",function($rootScope, $scope, $http, $location)
+tasks.controller("empCtrl",function($rootScope, $scope, $http, $location)
 {
     $rootScope.var = "Employee Details"
     //retrieve JSON file
@@ -48,7 +47,7 @@ abc.controller("empCtrl",function($rootScope, $scope, $http, $location)
         })
     }
 })
-abc.controller("searchCtrl", function($scope,$rootScope, $http){
+tasks.controller("searchCtrl", function($scope,$rootScope, $http){
     $rootScope.var = "Search Employees"
     $scope.message = "Search employees in tasks by name:"
 
@@ -71,6 +70,6 @@ abc.controller("searchCtrl", function($scope,$rootScope, $http){
         }
     })
 })
-abc.controller("addCtrl", function($rootScope){
+tasks.controller("addCtrl", function($rootScope){
     $rootScope.var = "Add Employee"
 })

@@ -1,0 +1,37 @@
+<div>
+    <h1 style="height: 1rem;background-color: yellow;"></h1>
+
+    <form id='addRecordForm' action="{{formAction}}" method="post" class="container col-sm-5 pt-4">
+        <h2>Enter New Record</h2>
+        <div class="mb-3 mt-3">
+            <label for="id">ID</label>
+            <input type='text' name='emp_id' id='id' class="form-control" ng-model="emp.emp_id" placeholder="Enter id..">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="name">Name</label>
+            <input type='text' name='emp_firstname' id='firstname' class="form-control" ng-model="emp.emp_firstname" placeholder="Enter first name..">
+            <input type='text' name='emp_lastname' id='lastname'  class="form-control" ng-model="emp.emp_lastname" placeholder="Enter last name..">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="phone">Phone</label>
+            <input type='text' name='emp_phone' id='phone' class="form-control" ng-model="emp.emp_phone" placeholder="Enter phone..">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="email">Email</label>
+            <input type='text' name='emp_email' id='email' class="form-control" ng-model="emp.emp_email" placeholder="Enter email..">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="address">Address</label>
+            <input type='text' name='emp_address' id='address' class="form-control" ng-model="emp.emp_address" placeholder="Enter address..">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="joiningdate">Joining Date (yyyy-mm-dd)</label>
+            <input type='text' name='emp_joiningdate' id='joiningdate' class="form-control" ng-model="emp.emp_joiningdate" placeholder="Enter joining date..">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="pswd">Password</label>
+            <input type='text' name='emp_password' id='pswd' class="form-control" ng-model="emp.emp_password" placeholder="Enter password..">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

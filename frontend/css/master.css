@@ -67,7 +67,14 @@ li:hover, .meeting_card_wrapper p:hover{
     .left_nav .left_nav_sub{
         margin:8% 15%;
     }
+    .material-icons{
+        font-size: 30px;
+    }
 
+    .material-icons:hover{
+        cursor: pointer;
+        color:#e05e5e;
+    }
 .content_wrapper{
     width: 72%;
     padding:3% 5%;
