@@ -12,6 +12,10 @@ meetings.config(($routeProvider)=>{
         templateUrl: './meetingPages/meetingsEmployee.html',
         controller:'empCtrl'
     })
+    .when("/search", {
+        templateUrl: './meetingPages/searchMeetingsEmployee.html',
+        controller: "searchCtrl"
+    })
     .when("/addEmp", {
         templateUrl: './meetingPages/addMeetingsEmployeeForm.html',
         controller: 'addCtrl'
@@ -39,17 +43,40 @@ meetings.controller("empCtrl",function($rootScope, $scope, $http, $location)
         console.log("PMS_AM Employee Table retrieved.")
     })
     //POST request to remove employee
-    $scope.removeEmp = function(id, name) {
+    $rootScope.removeEmp = function(id, name) {
         $http.post('/RemoveEmployee', {"id": id, "name": name})
         .success(() => {
             $location.path('/')
         })
     }
     //POST request to update employee
-    $scope.updateEmp = function(emp) {
+    $rootScope.updateEmp = function(emp) {
         $rootScope.emp = emp
         $location.path('/addEmp')
     }
+})
+meetings.controller("searchCtrl", function($scope,$rootScope, $http, $location){
+    $rootScope.var = "Search Employees"
+    $scope.message = "Search employees in meetings by ID:"
+
+    //retrieve JSON file
+    $http.get("http://127.0.0.1:9100/Employee")
+    .success(function(response){
+        $rootScope.employees = response
+        console.log("empJSON retrieved.")
+    })
+
+    search_name = document.getElementById("search_name")
+    search_name.addEventListener('keyup', ()=>{
+        if(search_name.value.trim() == "")
+        {
+            document.getElementById("search_table").style.display = "none"
+        }
+        else
+        {
+            document.getElementById("search_table").style.display = "table"
+        }
+    })
 })
 meetings.controller("addCtrl", function($rootScope, $scope){
     if ($rootScope.emp === 0) {
